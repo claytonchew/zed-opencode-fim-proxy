@@ -1,0 +1,12 @@
+version: "3.8"
+services:
+  proxy:
+    build: .
+    ports:
+      - "${PORT:-11111}:${PORT:-11111}"
+    environment:
+      - OPENCODE_ENDPOINT=${OPENCODE_ENDPOINT:-https://opencode.ai/zen/go/v1/chat/completions}
+      - MODEL=${MODEL:-deepseek-v4-flash}
+      - PORT=${PORT:-11111}
+      - TIMEOUT=${TIMEOUT:-10}
+    restart: unless-stopped
