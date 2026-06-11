@@ -32,7 +32,13 @@ Then configure Zed (see below).
 
 ## Zed Configuration
 
-Add the following to your Zed settings.json:
+**Important**: Before configuring edit predictions, you must set up your OpenCode API key in Zed's provider settings:
+
+1. Open Zed settings
+2. Search `#edit_predictions.providers`, scroll down till you see "API Key" under "OpenAI Compatible API".
+3. Add your OpenCode API key.
+
+Then add the following to your Zed settings.json:
 
 ```json
 {
@@ -49,6 +55,8 @@ Add the following to your Zed settings.json:
   "show_edit_predictions": true
 }
 ```
+
+The proxy forwards your API key from Zed to OpenCode Go automatically.
 
 ## Configuration
 
